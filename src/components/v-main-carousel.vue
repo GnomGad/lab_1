@@ -1,31 +1,15 @@
 <template>
   <div class="v-main-carousel">
-
-    <v-carousel
-        cycle
-        :height="carousel_height"
-        hide-delimiter-background
-        show-arrows-on-hover
-    >
-      <v-carousel-item
-          v-for="(slide, i) in slides"
-          :key="i"
+      <v-carousel
+          :height="carousel_height"
       >
-        <v-sheet
-            :color="colors[i]"
-            height="100%"
+        <v-carousel-item
+            v-for="(item,i) in items"
+            :key="i"
+
         >
-          <v-row
-              class="fill-height"
-              align="center"
-              justify="center"
-          >
-            <div class="text-h2">
-              {{ slide }} Slide
-            </div>
-          </v-row>
-        </v-sheet>
-      </v-carousel-item>
+        <v-img :height="carousel_height" :src="require( '../assets/img/'+item.src)"></v-img>
+        </v-carousel-item>
     </v-carousel>
 
   </div>
@@ -37,19 +21,16 @@ export default {
   data () {
     return {
       carousel_height:420,
-      colors: [
-        'indigo',
-        'warning',
-        'pink darken-2',
-        'red lighten-1',
-        'deep-purple accent-4',
-      ],
-      slides: [
-        'First',
-        'Second',
-        'Third',
-        'Fourth',
-        'Fifth',
+      items: [
+        {
+          src: 'c1.jpg',
+        },
+        {
+          src: 'c2.jpg',
+        },
+        {
+          src: 'c3.jpg',
+        },
       ],
     }
   },
@@ -57,4 +38,8 @@ export default {
 </script>
 
 <style lang="scss">
+.v-main-carousel{
+  height: 200px;
+
+}
 </style>

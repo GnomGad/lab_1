@@ -9,8 +9,8 @@
         <v-list-catalog></v-list-catalog>
         <v-card
             tile
-            height="400px"
-            width="100%"
+            max-height="400px"
+            min-width="0px"
         >
 
         <div class="carousel">
@@ -22,9 +22,12 @@
 
       </v-container>
       <v-container class="middle-container">
-        <div class="carousel">
-          <v-main-carousel />
-        </div>
+        <v-catalog></v-catalog>
+
+      </v-container>
+      <v-container class="middle-container">
+        <v-catalog></v-catalog>
+
       </v-container>
 
     </v-main>
@@ -40,6 +43,7 @@
 import vHeader from './components/v-header';
 import vMainCarousel from './components/v-main-carousel';
 import vListCatalog from './components/v-list-catalog'
+import vCatalog from './components/catalog/v-block-catalog'
 import  vIndigoFooter from './components/v-company-footer'
 
 export default {
@@ -49,6 +53,7 @@ export default {
     vHeader,
     vMainCarousel,
     vListCatalog,
+    vCatalog,
     vIndigoFooter
   },
   data(){
@@ -65,7 +70,12 @@ export default {
     min-width:350px ;
   }
   .carousel{
-    width: 100%;
+    max-width:960px;
+  }
+  @media screen and (max-width:480px) {
+    .carousel{
+      display: none;
+    }
   }
   .top-container{
     display: flex;
@@ -73,6 +83,12 @@ export default {
     justify-content: center;
     max-width: 1200px;
     margin-top: 80px;
+  }
+  .middle-container{
+    max-width: 1200px;
+    margin-top: 80px;
+    padding: 0px;
+    margin-bottom: 80px;
   }
 
 </style>
