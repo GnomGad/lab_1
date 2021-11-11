@@ -35,8 +35,16 @@ let store = new Vuex.Store({
             console.log(state.cart);
 
         },
-        DELETE_FROM_CART: (state, index)=>{
-            state.cart.splice(index,1);
+        DELETE_FROM_CART: (state, product)=>{
+            state.cart.map(function (item, index){
+                if(item.article === product.article){
+                        item.quantity--;
+                    if(product.quantity <1){
+                        state.cart.splice(index,1);
+                    }
+                }
+            });
+
         },
         DECREMENT: (state, index)=>{
             if(state.cart[index].quantity > 1) {
@@ -49,7 +57,7 @@ let store = new Vuex.Store({
     },
     actions:{
         GET_PRODUCTS_FROM_API({commit}) {
-            return axios('http://localhost:3000/products',{
+            return axios('http://178.213.110.121:3000/products',{
                 method: 'GET'
             })
                 .then((products)=>{

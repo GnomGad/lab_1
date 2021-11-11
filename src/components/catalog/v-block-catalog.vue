@@ -4,7 +4,9 @@
         v-for="product in products"
         :key="product.article"
         :product_data="product"
+        :is_quantity="is_quantity"
         @addToCart="addToCart"
+        @deleteFromCart="deleteFromCart"
     />
 
   </div>
@@ -22,17 +24,27 @@ export default {
       default(){
         return {}
       }
-    }
+    },
+    is_quantity:{
+      type: Boolean,
+      default(){
+        return false;
+      }
+    },
   },
   components:{
     vCatalogItem
   },
   methods:{
     ...mapActions([
-      'ADD_TO_CART'
+      'ADD_TO_CART',
+        'DELETE_FROM_CART'
     ]),
     addToCart(data){
       this.ADD_TO_CART(data);
+    },
+    deleteFromCart(data){
+      this.DELETE_FROM_CART(data);
     }
   },
   computed: {

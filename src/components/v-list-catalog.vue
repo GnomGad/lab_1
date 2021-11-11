@@ -9,12 +9,14 @@
       <v-list rounded>
         <h3>Каталог</h3>
         <v-list-item-group
-            v-model="selectedItem"
             color="orange"
+            no-action
         >
           <v-list-item
               v-for="(item, i) in items"
               :key="i"
+              link
+              no-action
           >
             <v-list-item-icon>
               <v-icon v-text="item.icon"></v-icon>
