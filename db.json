@@ -1,0 +1,101 @@
+{
+  "products": [
+    {
+      "image": "ard.jpg",
+      "name": "Arduino Mega2560 WiFi R3 ATmega2560 + ESP8266 CH340",
+      "price": 1500,
+      "article": "T1",
+      "available": true,
+      "category": "мк"
+    },
+    {
+      "image": "ard.jpg",
+      "name": "ESP32-CAM ESP32-S OV2640",
+      "price": 2250,
+      "article": "T2",
+      "available": true,
+      "category": "мк"
+    },
+    {
+      "image": "ard.jpg",
+      "name": "Набор Arduino",
+      "price": 2500,
+      "article": "T3",
+      "available": false,
+      "category": "набор"
+    },
+    {
+      "image": "ard.jpg",
+      "name": "Arduino Mega2560 WiFi R3 ATmega2560 + ESP8266 CH340",
+      "price": 150,
+      "article": "T4",
+      "available": true,
+      "category": "мк"
+    },
+    {
+      "image": "ard.jpg",
+      "name": "ESP32-CAM ESP32-S OV2640",
+      "price": 50,
+      "article": "T5",
+      "available": true,
+      "category": "мк"
+    },
+    {
+      "image": "ard.jpg",
+      "name": "Набор Arduino",
+      "price": 250,
+      "article": "T6",
+      "available": false,
+      "category": "набор"
+    },
+    {
+      "image": "ard.jpg",
+      "name": "Arduino Mega2560 WiFi R3 ATmega2560 + ESP8266 CH340",
+      "price": 1500,
+      "article": "T7",
+      "available": true,
+      "category": "мк"
+    },
+    {
+      "image": "ard.jpg",
+      "name": "ESP32-CAM ESP32-S OV2640",
+      "price": 2250,
+      "article": "T8",
+      "available": true,
+      "category": "мк"
+    },
+    {
+      "image": "ard.jpg",
+      "name": "Набор Arduino",
+      "price": 2500,
+      "article": "T9",
+      "available": false,
+      "category": "набор"
+    },
+    {
+      "image": "ard.jpg",
+      "name": "Arduino Mega2560 WiFi R3 ATmega2560 + ESP8266 CH340",
+      "price": 1530,
+      "article": "T10",
+      "available": true,
+      "category": "мк"
+    },
+    {
+      "image": "ard.jpg",
+      "name": "ESP32-CAM ESP32-S OV2640",
+      "price": 2250,
+      "article": "T11",
+      "available": true,
+      "category": "мк"
+    },
+    {
+      "image": "ard.jpg",
+      "name": "Набор Arduino",
+      "price": 2221,
+      "article": "T12",
+      "available": false,
+      "category": "набор"
+    }
+
+  ]
+}

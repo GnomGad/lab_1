@@ -18,8 +18,9 @@
         <v-btn icon>
           <v-badge
               color="green"
-              :content="cart_counter"
+              :content="products_count"
               overlap
+              v-if="products_count"
           >
             <v-icon>mdi-cart</v-icon>
           </v-badge>
@@ -42,12 +43,12 @@
             v-model="group"
             active-class="orange--text"
         >
-          <v-list-item>
+          <v-list-item v-if="products_count">
             <v-list-item-icon>
               <v-btn icon>
                 <v-badge
                     color="green"
-                    :content="cart_counter"
+                    :content="products_count"
                     overlap
                 >
                   <v-icon>mdi-cart</v-icon>
@@ -82,8 +83,17 @@
 
 <script>
 import vListCatalog from './v-list-catalog'
+
 export default {
   name: "v-header",
+  props:{
+    products_count:{
+      type: Number,
+      default(){
+        return 0;
+      }
+    }
+  },
   components:{
     vListCatalog
   },
@@ -91,7 +101,7 @@ export default {
     return{
       drawer: false,
       group: null,
-      cart_counter:1,
+
       items: [
         { title: 'Главная', icon: 'mdi-home' },
       ],

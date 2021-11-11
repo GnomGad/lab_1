@@ -1,8 +1,9 @@
 <template>
   <v-app  class="app">
-    <v-header></v-header>
+    <v-header
+    :products_count="CART.length"
+    />
     <!-- end v-header -->
-
 
     <v-main>
       <v-container class="top-container">
@@ -18,17 +19,12 @@
         </div>
         </v-card>
         <!-- end .top-container -->
-
-
       </v-container>
-      <v-container class="middle-container">
-        <v-catalog></v-catalog>
 
-      </v-container>
-      <v-container class="middle-container">
-        <v-catalog></v-catalog>
 
-      </v-container>
+      <keep-alive>
+        <router-view></router-view>
+      </keep-alive>
 
     </v-main>
 
@@ -43,8 +39,8 @@
 import vHeader from './components/v-header';
 import vMainCarousel from './components/v-main-carousel';
 import vListCatalog from './components/v-list-catalog'
-import vCatalog from './components/catalog/v-block-catalog'
 import  vIndigoFooter from './components/v-company-footer'
+import {mapGetters} from 'vuex'
 
 export default {
   name: 'App',
@@ -53,13 +49,21 @@ export default {
     vHeader,
     vMainCarousel,
     vListCatalog,
-    vCatalog,
     vIndigoFooter
   },
   data(){
     return {
-
+      low_price:[],
+      popular:[],
     }
+  },
+  methods:{
+  },
+  computed: {
+    ...mapGetters([
+          'CART'
+        ]
+    ),
   },
 
 };
@@ -90,5 +94,7 @@ export default {
     padding: 0px;
     margin-bottom: 80px;
   }
-
+h2{
+  margin-bottom: 50px;
+}
 </style>
