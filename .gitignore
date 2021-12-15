@@ -2,8 +2,10 @@
 node_modules
 /dist
 
+*.lock
 
 # local env files
+.env.development
 .env.local
 .env.*.local
 

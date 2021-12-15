@@ -1,101 +1,118 @@
 {
+  "slider_photos": [
+    {
+      "image": "c1.jpg"
+    },
+    {
+      "image": "c2.jpg"
+    },
+    {
+      "image": "c3.jpg"
+    }
+  ],
   "products": [
     {
       "image": "ard.jpg",
       "name": "Arduino Mega2560 WiFi R3 ATmega2560 + ESP8266 CH340",
       "price": 1500,
       "article": "T1",
-      "available": true,
-      "category": "мк"
+      "category": "ардуино",
+      "quantity": 0
     },
     {
       "image": "im1.jpg",
       "name": "Realme GT Master Edition 8/256Гб",
       "price": 41111,
       "article": "T2",
-      "available": true,
-      "category": "мк"
+      "category": "телефоны",
+      "quantity": 0
     },
     {
       "image": "im2.jpg",
       "name": "JVC HA-S220-W-E",
-      "price": 18889,
+      "price": 2889,
       "article": "T3",
-      "available": false,
-      "category": "набор"
+      "category": "наушники",
+      "quantity": 0
     },
     {
       "image": "img3.jpg",
       "name": "JVC HA-S220-A-E",
-      "price": 150,
+      "price": 2990,
       "article": "T4",
-      "available": true,
-      "category": "мк"
+      "category": "наушники",
+      "quantity": 0
     },
     {
       "image": "img4.jpg",
       "name": "Huawei MateBook 13 2020",
-      "price": 50,
+      "price": 58550,
       "article": "T5",
-      "available": true,
-      "category": "мк"
+      "category": "ноутбуки",
+      "quantity": 0
     },
     {
       "image": "img5.jpg",
       "name": "Acer Aspire 1 A114",
-      "price": 250,
+      "price": 39250,
       "article": "T6",
-      "available": false,
-      "category": "набор"
+      "category": "ноутбуки",
+      "quantity": 0
     },
     {
       "image": "img6.jpg",
       "name": "Defender UltraMate SM-535",
       "price": 1500,
       "article": "T7",
-      "available": true,
-      "category": "мк"
+      "category": "клавиатуры",
+      "quantity": 0
     },
     {
       "image": "img7.jpg",
       "name": "Defender Monstro GM-510L",
       "price": 2250,
       "article": "T8",
-      "available": true,
-      "category": "мк"
+      "category": "мышки",
+      "quantity": 0
     },
     {
       "image": "img8.jpg",
       "name": "Defender Invoker GM-947",
       "price": 2500,
       "article": "T9",
-      "available": false,
-      "category": "набор"
+      "category": "мышки",
+      "quantity": 0
     },
     {
       "image": "img9.jpg",
       "name": "Defender Trigger GM-934",
-      "price": 1530,
+      "price": 2530,
       "article": "T10",
-      "available": true,
-      "category": "мк"
+      "category": "мышки",
+      "quantity": 0
     },
     {
       "image": "img10.jpg",
       "name": "AOC 24B1H",
-      "price": 2250,
+      "price": 22250,
       "article": "T11",
-      "available": true,
-      "category": "мк"
+      "category": "телевизоры",
+      "quantity": 0
     },
     {
       "image": "ard.jpg",
       "name": "Набор Arduino",
       "price": 2221,
       "article": "T12",
-      "available": false,
-      "category": "набор"
+      "category": "ардуино",
+      "quantity": 0
     }
 
+  ],
+  "details": [
+    {
+      "article": "T1",
+      "info": ""
+    }
   ]
 }

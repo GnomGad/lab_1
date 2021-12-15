@@ -4,17 +4,20 @@
       class="mx-auto"
       max-width="230"
       height="350"
+
   >
 
+    <v-card
+        :to="{name:'item',params:{title:product_data.article, product_data:product_data}}">
     <v-img
         class="white--text align-end"
         height="150px"
         :src="require( '../../assets/img/' + product_data.image)"
     >
     </v-img>
+    </v-card>
 
-
-    <v-card-title>{{ product_data.name }}</v-card-title>
+    <v-card-title align="center">{{ product_data.name }}</v-card-title>
     <v-card-actions class="actions"
     >
       <v-row
@@ -98,9 +101,7 @@ export default {
       this.$emit('deleteFromCart',this.product_data);
     }
   },
-  mounted() {
-    this.$set(this.product_data, 'quantity', 1);
-  }
+
 }
 </script>
 

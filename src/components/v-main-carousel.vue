@@ -8,7 +8,7 @@
             :key="i"
 
         >
-        <v-img :height="carousel_height" :src="require( '../assets/img/'+item.src)"></v-img>
+        <v-img :height="carousel_height" :src="require( '../assets/img/'+item.name)"></v-img>
         </v-carousel-item>
     </v-carousel>
 
@@ -16,24 +16,30 @@
 </template>
 
 <script>
+import axios from "axios";
 export default {
   name: "v-main-carousel",
   data () {
     return {
       carousel_height:420,
       items: [
-        {
-          src: 'c1.jpg',
-        },
-        {
-          src: 'c2.jpg',
-        },
-        {
-          src: 'c3.jpg',
-        },
       ],
     }
   },
+  mounted() {
+    axios(process.env.VUE_APP_BACKEND+'/slider_photos',{
+      method: 'GET'
+    })
+    .then((slides)=>{
+       this.items = slides.data;
+        console.log(slides.data);
+        return slides;
+      })
+          .catch((error)=>{
+            console.log(error);
+            return error;
+          })
+  }
 }
 </script>
 

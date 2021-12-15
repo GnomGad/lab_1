@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import createPersistedState from 'vuex-persistedstate';
 import axios from "axios";
 
 Vue.use(Vuex);
@@ -9,6 +10,9 @@ let store = new Vuex.Store({
         products: [],
         cart:[]
     },
+    plugins: [
+        createPersistedState()
+    ],
     mutations:{
         SET_PRODUCTS_TO_STATE: (state, products) =>{
             state.products = products;
@@ -57,7 +61,7 @@ let store = new Vuex.Store({
     },
     actions:{
         GET_PRODUCTS_FROM_API({commit}) {
-            return axios('http://178.213.110.121:3000/products',{
+            return axios(process.env.VUE_APP_BACKEND+'/products',{
                 method: 'GET'
             })
                 .then((products)=>{
